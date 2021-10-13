@@ -104,19 +104,15 @@ Você também pode definir diversas medias Queries para uma única página. Outr
 
 Nesse exemplo uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media="screen and (min-width: 1024px)"` for verdadeira.
 
-> Revisar o conteúdo a seguir:
-
-
 
 
 ## Unidades Relativas
 
-A parte importante do nosso layout a não utilizar unidades fixas para nossas larguras.  
-Nós usamos por valores percentuais que fazem os elementos expandir hein de forma relativa a largura dos elementos superiores.  
+Quando você estiver desenvolvendo suas páginas evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
 
-Dessa forma permitimos mais liberdade aos elementos o que é essencial quando juntamos tudo em um design responsivo.  
+> Revisar o conteúdo a seguir:
 
-#### A unidade 'em'
+#### A unidade `em`
 
 CSS permite definir unidades relativas ao tamanho da fonte font-size  
 Por exemplo se o corpo da sua página tem um tamanho de fonte de 16 pixels usando 1.5em é o mesmo que 24 pixels (16*1.5)  
@@ -131,7 +127,7 @@ efeito em cascata. Nessa situação você tem muitos elementos aninhados
 usando tamanhos de fonte relativa para os seus correspondentes paz o que
  resulta em unidades de tamanho difíceis de controlar.  
 
-#### A unidade 'rem'
+#### A unidade `rem`
 
 Outra unidade relativa é o rem. Elementos com unidade observam apenas o tamanho da fonte do elemento raiz que é o elemento html.  
 Isso torna muito mais fácil de usar que em.  
