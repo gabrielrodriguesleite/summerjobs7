@@ -46,7 +46,7 @@ Fica claro que uma experiência de usuário agradável é importante independent
 
 Antes de você começar a fazer uma página web responsiva é importante entender alguns conceitos.
 
-## Viewport
+## Viewport  - janela de exibição
 
 O primeiro conceito é o viewport: a área visível de uma página web.  
 Normalmente uma página de internet com uma largura fixa se torna muito 
@@ -62,44 +62,54 @@ A notícia boa é que você pode controlar o comportamento do viewport em HTML5 
 ```
 
 Primeiro você configura a largura do _viewport_ para ser a mesma largura da tela do dispositivo com: `width=device-width`
-Então você configura o nível de _zoom_ inicial para 1.0 ou seja nenhum _zoom_ com: `initial-scale=1.0`
+Então você configura o nível de _zoom_ inicial para `1.0` ou seja nenhum _zoom_ com: `initial-scale=1.0`
 
 Apesar de você poder utilizar os valores que desejar, é recomendável usar esses valores como um padrão.
 
-## Media Queries
+## Media Queries  - consultas de mídia
 
-As "media queries" te permitem especificar um determinado estilo CSS para uma determinada largura de _viewport_ ou ainda outra regra qualquer que você quiser.  
+As "media queries" te permitem especificar um determinado estilo CSS para uma determinada largura de _viewport_ por exemplo fazendo sua página responsiva.  Na realidade você pode aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as caracterísitcas específicas e o ambiente de um dispositivo.
 
+Você define a "media query" usando a regra `@media` dentro da sua folha de estilos.
 
+```css
+@media screen and (max-width: 768px) {
+    body {
+    background-color: red;
+    }
+}
+```
+
+Nesse exemplo a regra `@media` é seguida pelo tipo de mídia que vamos consultar, `screen` nesse caso (a tela do dispositivo) então temos o operador lógico `and` e por
+
+fim a condição para a aplicação da regra, no caso `max-width: 768px` para então definirmos a regra que desejamos aplicar.
+
+Além disso podemos definir múltiplas condições por exemplo máximo e mínimo largura do *viewport*.
+
+```css
+@media screen and (min-width: 480px) and (max-width: 800px) {
+   body {
+     background-color: green;
+  }
+}  
+```
+
+Agora o estilo vai ser aplicado em telas com tamanho entre 480 e 800 pixels.  
+Você também pode definir diversas medias Queries para uma única página.
+
+Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
+
+```css
+<!-- Folha de estilo dependente do tipo de mídia  -->
+<link rel="stylesheet" media="screen and (min-width: 1024px)" href="widescreen-styles.css" />
+```
+
+Nesse caso uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media=` for verdadeira.
 
 > Revisar o conteúdo a seguir:
 
 
-Isso
-permite as páginas de internet definir em diferentes estilos de layouts
-para diferentes tamanhos de telas e fazer a página responsiva.  
 
-Você define a media query usando a regra @mídia dentro da sua folha de estilos.  
-
-@media screen...  
-
-A regra @média é seguida pelo tipo de mídia que estamos apontando (a tela 
-no nosso caso) e configura a condição quando aplicar a regra (máxima 
-largura 600 pixels no nosso caso)  
-
-Além disso podemos definir múltiplas condições por exemplo máximo e mínimo largura do viewport  
-
-Ex...  
-
-Agora o estilo vai ser aplicado em telas com tamanho entre 800 e 1024 pixels.  
-Você também pode definir diversas medias Queries para uma única página da internet.  
-
-Mídia
- queres permite você definir pontos de parada eu estilo deve mudar, 
-também como definir a folha de estilos correspondente para esse ponto de
- parada.  
-
-> 
 
 ## Unidades Relativas
 
