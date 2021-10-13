@@ -68,9 +68,9 @@ Apesar de você poder utilizar os valores que desejar, é recomendável usar ess
 
 ## Media Queries  - consultas de mídia
 
-As "media queries" te permitem especificar um determinado estilo CSS para uma determinada largura de _viewport_ por exemplo fazendo sua página responsiva.  Na realidade você pode aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as caracterísitcas específicas e o ambiente de um dispositivo.
+As _media queries_ permitem a você especificar um determinado estilo CSS para uma determinada largura de _viewport_ por exemplo, fazendo sua página responsiva.  Na realidade você pode aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as caracterísitcas específicas e o ambiente de um dispositivo.
 
-Você define a "media query" usando a regra `@media` dentro da sua folha de estilos.
+O exemplo a seguir mostra como você pode definir uma _media query_ usando a regra `@media` dentro da sua folha de estilos.
 
 ```css
 @media screen and (max-width: 768px) {
@@ -80,9 +80,7 @@ Você define a "media query" usando a regra `@media` dentro da sua folha de esti
 }
 ```
 
-Nesse exemplo a regra `@media` é seguida pelo tipo de mídia que vamos consultar, `screen` nesse caso (a tela do dispositivo) então temos o operador lógico `and` e por
-
-fim a condição para a aplicação da regra, no caso `max-width: 768px` para então definirmos a regra que desejamos aplicar.
+*Entendendo o código:* A regra `@media` é seguida pelo tipo de mídia que vamos consultar, `screen` nesse caso (a tela do dispositivo) então temos o operador lógico `and` e por fim a condição para a aplicação da regra, no caso `max-width: 768px` para então definirmos a regra que desejamos aplicar.
 
 Além disso podemos definir múltiplas condições por exemplo máximo e mínimo largura do *viewport*.
 
@@ -95,16 +93,16 @@ Além disso podemos definir múltiplas condições por exemplo máximo e mínimo
 ```
 
 Agora o estilo vai ser aplicado em telas com tamanho entre 480 e 800 pixels.  
-Você também pode definir diversas medias Queries para uma única página.
 
-Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
+
+Você também pode definir diversas medias Queries para uma única página. Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
 
 ```css
 <!-- Folha de estilo dependente do tipo de mídia  -->
 <link rel="stylesheet" media="screen and (min-width: 1024px)" href="widescreen-styles.css" />
 ```
 
-Nesse caso uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media=` for verdadeira.
+Nesse exemplo uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media="screen and (min-width: 1024px)"` for verdadeira.
 
 > Revisar o conteúdo a seguir:
 
