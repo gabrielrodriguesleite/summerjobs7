@@ -126,17 +126,69 @@ Outra unidade relativa é o `rem`. Propriedades definidas com a unidade `rem` s�
 
 Chegou a hora de por em prática o que você aprendeu.
 
-1. Complete o código com a `tag` usada para determinar o _viewport_
+Para os próximos exercícios crie uma pasta que contenha os arquivos `index.html` e `styles.css`
+
+Copie o seguinte código e cole dentro do seu arquivo `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>CSS Responsivo</title>
+</head>
+<body>
+  <h1 class="titulo">CSS Responsivo</h1>
+  <h2 class="assunto">Introdução ao Responsive Design</h2>
+  <a class="botao">Entrar</a>
+  <p>Um pequeno parágrafo sobre desenvolver páginas web responsivas.</p>
+  <div class="left">left</div>
+  <div class="right">right</div>
+</body>
+</html>
+```
+
+Copie o seguinte código e cole dentro do seu arquivo `styles.css`:
+
+```css
+p {
+  font-size: 1.5rem;
+}
+
+.left {
+  float: left;
+  background-color: aquamarine;
+}
+
+.right {
+  float: right;
+  background-color: aqua;
+}
+
+.left, .right {
+  text-align: center;
+  width: 50%;
+}
+
+/* Seu código aqui ↓ */
+
+```
+
+### Exercícios:
+
+1. Complete o seguinte código com a `tag` usada para determinar o _viewport_ e adicione ao seu arquivo `index.html`
    
    ```html
    <__________ name="viewport" content="width=device-width, initial-scale=1.0">
    ```
 
-2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
+2. Complete o código com o seletor que define o tamanho da unidade relativa `rem` dentro do arquivo `styles.css`
    
    ```css
    __________ {
-       font-size: 16px;
+       font-size: 24px;
    }
    ```
 
@@ -153,11 +205,6 @@ Chegou a hora de por em prática o que você aprendeu.
 4. Complete o código para fazer as classes `left`  e `right` ocuparem `100%` da largura em telas **maiores** que `639px` de largura e **menores** que `801px` de largura.
    
    ```css
-   .left, .right {
-    float: left;
-    width: 50%;
-   }
-   
    __________ screen and (__________: 640px) and (__________: 800px) {
     .left, .right {
       width: 100%;
@@ -175,17 +222,17 @@ Chegou a hora de por em prática o que você aprendeu.
 
 ## Gabarito (separar do arquivo)
 
-1. Complete o código com a `tag` usada para determinar o _viewport_
+1. Complete o seguinte código com a `tag` usada para determinar o *viewport* e adicione ao seu arquivo `index.html`
    
    ```html
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    ```
 
-2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
+2. Complete o código com o seletor que define o tamanho da unidade relativa `rem` dentro do arquivo `styles.css`
    
    ```css
    html {
-       font-size: 16px;
+       font-size: 24px;
    }
    ```
 
@@ -202,11 +249,6 @@ Chegou a hora de por em prática o que você aprendeu.
 4. Complete o código para fazer as classes `left` e `right` ocuparem `100%` da largura em telas **maiores** que `639px` de largura e **menores** que `801px` de largura.
    
    ```css
-   .left, .right {
-    float: left;
-    width: 50%;
-   }
-   
    @media screen and (min-width: 640px) and (max-width: 800px) {
     .left, .right {
       width: 100%;
