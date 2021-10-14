@@ -47,11 +47,7 @@ Antes de você começar a fazer uma página web responsiva é importante entende
 ## Viewport  - janela de exibição
 
 O primeiro conceito é o viewport: a área visível de uma página web.
-Normalmente uma página de internet com uma largura fixa se torna muito
-larga para caber no viewport numa tela uma pequena assim como a
-de um dispositivo móvel, como um tablet por exemplo. Para contornar isso
-navegadores de dispositivos móveis reduzem a escala da página inteira até
-ela caber na tela. Esse é o motívo de uma página que não é responsiva parecer ter o _zoom_ reduzido quando acessada por um dispositivo móvel.
+Normalmente uma página de internet com uma largura fixa se torna muito larga para caber no viewport de uma tela pequena assim como a de um dispositivo móvel, como um tablet por exemplo. Para contornar isso navegadores de dispositivos móveis reduzem a escala da página inteira até ela caber na tela. Esse é o motívo de uma página que não é responsiva parecer ter o _zoom_ reduzido quando acessada por um dispositivo móvel.
 
 A notícia boa é que você pode controlar o comportamento do viewport em HTML5 usando a _tag_ `<meta>`. Para isso você pode simplesmente incluir essa linha de código no conteúdo da sua `<head></head> `
 
@@ -92,7 +88,7 @@ Além disso podemos definir múltiplas condições por exemplo máximo e mínimo
 
 Agora o estilo vai ser aplicado em telas com tamanho entre 480 e 800 pixels.
 
-Você também pode definir diversas medias Queries para uma única página. Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
+Você também pode definir diversas _medias queries_ para uma única página. Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
 
 ```css
 <!-- Folha de estilo dependente do tipo de mídia  -->
