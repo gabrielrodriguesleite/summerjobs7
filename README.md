@@ -47,7 +47,8 @@ Antes de você começar a fazer uma página web responsiva é importante entende
 ## Viewport  - janela de exibição
 
 O primeiro conceito é o viewport: a área visível de uma página web.
-Normalmente uma página de internet com uma largura fixa se torna muito larga para caber no viewport de uma tela pequena assim como a de um dispositivo móvel, como um tablet por exemplo. Para contornar isso navegadores de dispositivos móveis reduzem a escala da página inteira até ela caber na tela. Esse é o motívo de uma página que não é responsiva parecer ter o _zoom_ reduzido quando acessada por um dispositivo móvel.
+
+Uma página de internet desenhada para computador se torna muito larga para caber no viewport de um dispositivo móvel, que possui uma tela pequena, um tablet por exemplo. Para contornar isso alguns navegadores de dispositivos móveis reduzem a escala da página inteira até ela caber na tela. Esse é o motívo de uma página que não é responsiva parecer ter o _zoom_ reduzido quando acessada por um dispositivo móvel.
 
 A notícia boa é que você pode controlar o comportamento do viewport em HTML5 usando a _tag_ `<meta>`. Para isso você pode simplesmente incluir essa linha de código no conteúdo da sua `<head></head> `
 
@@ -60,7 +61,7 @@ Então você configura o nível de _zoom_ inicial para `1.0` ou seja nenhum _zoo
 
 Apesar de você poder utilizar os valores que desejar, é recomendável usar esses valores como um padrão.
 
-## Media Queries  - consultas de mídia
+## Media queries  - consultas de mídia
 
 As _media queries_ permitem a você especificar um determinado estilo CSS para uma determinada largura de _viewport_ por exemplo, fazendo sua página responsiva.  Na realidade você pode aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as caracterísitcas específicas e o ambiente de um dispositivo.
 
@@ -99,7 +100,7 @@ Nesse exemplo uma folha de estilo `widescreen-styles.css` inteira é usada apena
 
 Outro valor comum que você pode usar no lugar de `screen` é `print` que define quais regras usar quando o conteúdo for para impressão ou para salvar no formato PDF.
 
-## Unidades Relativas
+## Unidades relativas
 
 Quando você estiver desenvolvendo seus estilos evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
 
@@ -208,7 +209,7 @@ p {
 
 5. **BÔNUS** - Crie uma regra que torne o `background-color` de todos os elementos branco somente quando o conteúdo for para impressão.
 
-## Recursos Adicionais
+## Recursos adicionais
 
 [Design Responsivo - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
 
