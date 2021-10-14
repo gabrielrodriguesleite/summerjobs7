@@ -105,7 +105,7 @@ Outro valor comum que você pode usar no lugar de `screen` é `print` que define
 
 ## Unidades Relativas
 
-Quando você estiver desenvolvendo sua seus estilos evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
+Quando você estiver desenvolvendo seus estilos evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
 
 CSS permite você definir unidades relativas ao tamanho da fonte `font-size`.
 
