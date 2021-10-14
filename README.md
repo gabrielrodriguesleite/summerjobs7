@@ -186,7 +186,7 @@ p {
    }
    ```
 
-3. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
+3. Complete o código com uma _media query_ que aplique a regra de estilo em **telas** com **largura de até** `768px`
    
    ```css
    __________ screen and (__________ : 768px) {
