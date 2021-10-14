@@ -104,38 +104,76 @@ Você também pode definir diversas medias Queries para uma única página. Outr
 
 Nesse exemplo uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media="screen and (min-width: 1024px)"` for verdadeira.
 
-
-
 ## Unidades Relativas
 
-Quando você estiver desenvolvendo suas páginas evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
+Quando você estiver desenvolvendo sua seus estilos evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
 
-> Revisar o conteúdo a seguir:
+CSS permite você definir unidades relativas ao tamanho da fonte `font-size`.
 
 #### A unidade `em`
 
-CSS permite definir unidades relativas ao tamanho da fonte font-size  
-Por exemplo se o corpo da sua página tem um tamanho de fonte de 16 pixels usando 1.5em é o mesmo que 24 pixels (16*1.5)  
+Ao definir uma propriedade usando a unidade `em` você está dizendo que o tamanho é proporcional a tantas vezes o tamanho da fonte do "elemento pai".
+Por exemplo se o corpo da sua página tem um tamanho de fonte de 16 pixels usando `2em` é o mesmo que dizer 32 pixels (16*2) .
 
-Isso é útil porque quando você tem que mudar o tamanho da fonte você precisa
- alterar isso somente no elemento raiz. Os elementos filhos vão herdar o
- tamanho relativo se estes usarem unidades em.  
+Isso é útil porque quando você tem que mudar o tamanho da fonte da sua página, você precisa apenas alterar isso no elemento que o contém. Os elementos filhos vão herdar o tamanho relativo se estes usarem unidades `em`.
 
-Contudo quando 
-você definir todos os tamanhos usando em você pode acabar tendo um 
-efeito em cascata. Nessa situação você tem muitos elementos aninhados 
-usando tamanhos de fonte relativa para os seus correspondentes paz o que
- resulta em unidades de tamanho difíceis de controlar.  
+Contudo quando definir todos os tamanhos usando `em` você pode acabar criando o efeito cascata. Nessa situação você tem muitos níveis de elementos aninhados usando tamanhos de fonte relativa para os seus correspondentes pais o que resulta em elementos de tamanho difíceis de controlar.
 
 #### A unidade `rem`
 
-Outra unidade relativa é o rem. Elementos com unidade observam apenas o tamanho da fonte do elemento raiz que é o elemento html.  
-Isso torna muito mais fácil de usar que em.  
-Configuramos o tamanho da fonte para o elemento html e todos tamanhos de fonte usando rem.  
-Tamanhos relativos também pode ser usados para margin e paddings.
+Outra unidade relativa é o `rem`. Propriedades definidas com a unidade `rem` são relativas apenas ao tamanho da fonte do elemento raiz que é o elemento `html`.  Isso o torna muito mais fácil de controlar do que `em`.  Configuramos o tamanho da fonte para o elemento `html` e todos tamanhos de fonte usando `rem`.  Tamanhos relativos também pode ser usados para `margin` e `paddings`.
 
 ## Vamos praticar!
 
+Chegou a hora de por em prática o que você aprendeu.
+
+1. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
+   
+   ```css
+   **@media** screen and (**max-width** : 768px) {
+       p {
+           font-size: 16px
+       }
+   }
+   ```
+
+2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
+   
+   ```css
+   **html** {
+       font-size: 16px;
+   }
+   ```
+
+3. Complete o código com a `tag` usada para determinar o _viewport_
+   
+   ```html
+   <**meta** name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+4.  Complete o código para fazer as classes `left`  e `right` ocuparem 100% da largura em telas maiores `639px` de largura e menores que `801px` de largura.
+   
+   ```css
+   .left, .right {
+     float: left;
+     width: 50%;
+   }
+   
+   @media screen and (**min-width**: 640px) and (**max-width**: 800px) {
+     .left, .right {
+       width: 100%;
+     }
+   }
+   ```
+   
+   
+
 ## Recursos Adicionais
+
+[Design Responsivo - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
+
+[HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp)
+
+[HTML5 - Responsive Web Design | Microsoft Docs](https://docs.microsoft.com/en-us/archive/msdn-magazine/2011/november/html5-responsive-web-design)
 
 ## Gabarito (separar do arquivo)
