@@ -14,8 +14,6 @@ Em poucas palavras, "Responsividade" é a habilidade de uma página web adaptar 
 
 * Criar regras CSS que são aplicadas dependendo do tamanho da tela do dispositivo.
 
-* A diferença entre responsividade e adaptabilidade.
-
 ## Por que isso é importante?
 
 No início da _internet_, as pessoas acessavam a rede com seu computador pessoal, conhecido como PC. Mas no final dos anos 2000 com o surgimento dos *smartphones* teve início uma nova era para a internet.
