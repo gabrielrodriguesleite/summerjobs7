@@ -18,9 +18,9 @@ Em poucas palavras, "Responsividade" é a habilidade de uma página web adaptar 
 
 ## Por que isso é importante?
 
-No início da _internet_, as pessoas acessavam a rede com seu computador pessoal, conhecido como PC. Mas no final dos anos 2000 com o surgimento dos *smartphones* teve início uma nova era para a internet. 
+No início da _internet_, as pessoas acessavam a rede com seu computador pessoal, conhecido como PC. Mas no final dos anos 2000 com o surgimento dos *smartphones* teve início uma nova era para a internet.
 
-Pode ser que você deixe de lado seu computador pessoal pela praticidade do seu *smartphone*. 
+Pode ser que você deixe de lado seu computador pessoal pela praticidade do seu *smartphone*.
 
 Pode ser que você prefira acessar a internet através do seu _smartphone_ ao invés de usar um computador de mesa ou _notebook_. A praticidade que os _smartphones_ trouxeram causou muitas mudanças. Em muitos *sites* se têm percebido um aumento no acesso através de aparelhos portáteis na mesma proporção que se têm notado a diminuição do acesso através de PCs.
 
@@ -38,7 +38,7 @@ Clicar em um botão numa tela pequena acaba se tornando uma tarefa impossível.
 
 **Mission: Impossible | Paramount Pictures**
 
-Ainda pior: clicar mais de uma vez no elemento errado pode fazer você desistir de usar a página. O que você pode fazer é dar _zoom_ na página e deslizar em todas as direções até encontrar o que procura. Uma tarefa nada fácil, muitas vezes demorada e cansativa. 
+Ainda pior: clicar mais de uma vez no elemento errado pode fazer você desistir de usar a página. O que você pode fazer é dar _zoom_ na página e deslizar em todas as direções até encontrar o que procura. Uma tarefa nada fácil, muitas vezes demorada e cansativa.
 
 Fica claro que uma experiência de usuário agradável é importante independente o dispositivo.
 
@@ -48,11 +48,11 @@ Antes de você começar a fazer uma página web responsiva é importante entende
 
 ## Viewport  - janela de exibição
 
-O primeiro conceito é o viewport: a área visível de uma página web.  
-Normalmente uma página de internet com uma largura fixa se torna muito 
-larga para caber no viewport numa tela uma pequena assim como a 
-de um dispositivo móvel, como um tablet por exemplo. Para contornar isso 
-navegadores de dispositivos móveis reduzem a escala da página inteira até 
+O primeiro conceito é o viewport: a área visível de uma página web.
+Normalmente uma página de internet com uma largura fixa se torna muito
+larga para caber no viewport numa tela uma pequena assim como a
+de um dispositivo móvel, como um tablet por exemplo. Para contornar isso
+navegadores de dispositivos móveis reduzem a escala da página inteira até
 ela caber na tela. Esse é o motívo de uma página que não é responsiva parecer ter o _zoom_ reduzido quando acessada por um dispositivo móvel.
 
 A notícia boa é que você pode controlar o comportamento do viewport em HTML5 usando a _tag_ `<meta>`. Para isso você pode simplesmente incluir essa linha de código no conteúdo da sua `<head></head> `
@@ -89,11 +89,10 @@ Além disso podemos definir múltiplas condições por exemplo máximo e mínimo
    body {
      background-color: green;
   }
-}  
+}
 ```
 
-Agora o estilo vai ser aplicado em telas com tamanho entre 480 e 800 pixels.  
-
+Agora o estilo vai ser aplicado em telas com tamanho entre 480 e 800 pixels.
 
 Você também pode definir diversas medias Queries para uma única página. Outra possibilidade interessante é definir uma folha de estilos baseado no tipo de mídia:
 
@@ -127,46 +126,44 @@ Outra unidade relativa é o `rem`. Propriedades definidas com a unidade `rem` s�
 
 Chegou a hora de por em prática o que você aprendeu.
 
-1. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
+1. Complete o código com a `tag` usada para determinar o _viewport_
+   
+   ```html
+   <__________ name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
    
    ```css
-   **@media** screen and (**max-width** : 768px) {
+   __________ {
+       font-size: 16px;
+   }
+   ```
+
+3. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
+   
+   ```css
+   __________ screen and (__________ : 768px) {
        p {
            font-size: 16px
        }
    }
    ```
 
-2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
-   
-   ```css
-   **html** {
-       font-size: 16px;
-   }
-   ```
-
-3. Complete o código com a `tag` usada para determinar o _viewport_
-   
-   ```html
-   <**meta** name="viewport" content="width=device-width, initial-scale=1.0">
-   ```
-
-4.  Complete o código para fazer as classes `left`  e `right` ocuparem 100% da largura em telas maiores `639px` de largura e menores que `801px` de largura.
+4. Complete o código para fazer as classes `left`  e `right` ocuparem `100%` da largura em telas **maiores** que `639px` de largura e **menores** que `801px` de largura.
    
    ```css
    .left, .right {
-     float: left;
-     width: 50%;
+    float: left;
+    width: 50%;
    }
    
-   @media screen and (**min-width**: 640px) and (**max-width**: 800px) {
-     .left, .right {
-       width: 100%;
-     }
+   __________ screen and (__________: 640px) and (__________: 800px) {
+    .left, .right {
+      width: 100%;
+    }
    }
    ```
-   
-   
 
 ## Recursos Adicionais
 
@@ -177,3 +174,44 @@ Chegou a hora de por em prática o que você aprendeu.
 [HTML5 - Responsive Web Design | Microsoft Docs](https://docs.microsoft.com/en-us/archive/msdn-magazine/2011/november/html5-responsive-web-design)
 
 ## Gabarito (separar do arquivo)
+
+1. Complete o código com a `tag` usada para determinar o _viewport_
+   
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+2. Complete o código com o seletor que define o tamanho da unidade relativa `rem`
+   
+   ```css
+   html {
+       font-size: 16px;
+   }
+   ```
+
+3. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
+   
+   ```css
+   @media screen and (max-width : 768px) {
+       p {
+           font-size: 16px
+       }
+   }
+   ```
+
+4. Complete o código para fazer as classes `left` e `right` ocuparem `100%` da largura em telas **maiores** que `639px` de largura e **menores** que `801px` de largura.
+   
+   ```css
+   .left, .right {
+    float: left;
+    width: 50%;
+   }
+   
+   @media screen and (min-width: 640px) and (max-width: 800px) {
+    .left, .right {
+      width: 100%;
+    }
+   }
+   ```
+
+___
