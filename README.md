@@ -103,6 +103,8 @@ Você também pode definir diversas medias Queries para uma única página. Outr
 
 Nesse exemplo uma folha de estilo `widescreen-styles.css` inteira é usada apenas quando a condição `media="screen and (min-width: 1024px)"` for verdadeira.
 
+Outro valor comum que você pode usar no lugar de `screen` é `print` que define quais regras usar quando o conteúdo for para impressão ou para salvar no formato PDF.
+
 ## Unidades Relativas
 
 Quando você estiver desenvolvendo sua seus estilos evite usar unidades fixas para definir a largura dos elementos. Prefira valores percentuais que permitem aos elementos expandirem até a largura do elemento em que estão contidos. Essa abordagem torna os elementos mais flexíveis, o que é essencial para construir um _design_ responsivo.
@@ -142,7 +144,6 @@ Copie o seguinte código e cole dentro do seu arquivo `index.html`:
 <body>
   <h1 class="titulo">CSS Responsivo</h1>
   <h2 class="assunto">Introdução ao Responsive Design</h2>
-  <a class="botao">Entrar</a>
   <p>Um pequeno parágrafo sobre desenvolver páginas web responsivas.</p>
   <div class="left">left</div>
   <div class="right">right</div>
@@ -173,7 +174,6 @@ p {
 }
 
 /* Seu código aqui ↓ */
-
 ```
 
 ### Exercícios:
@@ -212,6 +212,8 @@ p {
    }
    ```
 
+5. **BÔNUS** - Crie uma regra que torne o `background-color` de todos os elementos branco somente quando o conteúdo for para impressão.
+
 ## Recursos Adicionais
 
 [Design Responsivo - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
@@ -219,41 +221,5 @@ p {
 [HTML Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp)
 
 [HTML5 - Responsive Web Design | Microsoft Docs](https://docs.microsoft.com/en-us/archive/msdn-magazine/2011/november/html5-responsive-web-design)
-
-## Gabarito (separar do arquivo)
-
-1. Complete o seguinte código com a `tag` usada para determinar o *viewport* e adicione ao seu arquivo `index.html`
-   
-   ```html
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   ```
-
-2. Complete o código com o seletor que define o tamanho da unidade relativa `rem` dentro do arquivo `styles.css`
-   
-   ```css
-   html {
-       font-size: 24px;
-   }
-   ```
-
-3. Complete o código com uma `media querie` que aplique a regra de estilo em **telas** com **largura de até** `768px`
-   
-   ```css
-   @media screen and (max-width : 768px) {
-       p {
-           font-size: 16px
-       }
-   }
-   ```
-
-4. Complete o código para fazer as classes `left` e `right` ocuparem `100%` da largura em telas **maiores** que `639px` de largura e **menores** que `801px` de largura.
-   
-   ```css
-   @media screen and (min-width: 640px) and (max-width: 800px) {
-    .left, .right {
-      width: 100%;
-    }
-   }
-   ```
 
 ___
