@@ -20,7 +20,7 @@ Em poucas palavras, "Responsividade" é a habilidade de uma página web adaptar 
 
 + Criar e aplicar estilos usando regras específicas para cada tipo de dispositivo.
 
-+ Desenvolver páginas agradáveis para o usuário de qualquer dispositivo.
++ Tornar a experiência agradável para o usuário de qualquer dispositivo.
 
 ## Por que isso é importante?
 
